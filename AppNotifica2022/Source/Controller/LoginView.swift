@@ -12,78 +12,27 @@ class LoginView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = .viewBackgroundColor
         setupVisualElements()
     }
     
-    
-    
    //cria a função com as propriedades da imagem no login
-    var imageLogin: UIImageView = {
-        let imagem = UIImageView ()
-        imagem.image = UIImage(named: "ImageLogin")
-        imagem.contentMode = .scaleAspectFit
-        imagem.translatesAutoresizingMaskIntoConstraints = false
-        
-        return imagem
-    }()
+    var imageLogin = ImageDefault (image: "ImageLogin")
     
     //cria a função com as propriedades da label no login
-    var imageLabel: UILabel = {
-        let label = UILabel ()
-        label.textColor = UIColor(red: 0.541, green: 0.541, blue: 0.557, alpha: 1)
-        label.font = UIFont(name: "SFProDisplay-Light", size: 16)
-        label.text = "Registre e gerencie as ocorrências do seu IF"
-        label.translatesAutoresizingMaskIntoConstraints = false
+    var imageLabel = LabelDefault (text: "Registre e gerencie as ocorrências do seu IF")
         
-        return label
-    }()
-    
     //cria a função com as propriedades da campo de texto para o e-mail
-    var emailTextField: UITextField = {
-        let textField = UITextField ()
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-        textField.placeholder = "E-mail"
-        
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        
-        return textField
-    }()
+    var emailTextField = TextFieldDefault (text: "E-mail")
     
     //cria a função com as propriedades da campo de texto para a senha
-    var passwordTextField: UITextField = {
-        let textField = UITextField ()
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-        textField.placeholder = "Password"
-        
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        
-        return textField
-    }()
-    
+    var passwordTextField = TextFieldDefault (text: "Password")
+       
     //cria a função com as propriedades do botão para logar
-    var buttonLogar: UIButton = {
-        let button = UIButton ()
-        button.setTitle("LOGAR", for: .normal)
-        button.layer.backgroundColor = UIColor(red: 0.369, green: 0.639, blue: 0.639, alpha: 1).cgColor
-        button.layer.cornerRadius = 6
-        
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
+    var buttonLogar: UIButton = ButtomDefault(text: "LOGAR")
     
     //cria a função com as propriedades do botão para registrar
-    var buttonRegistrar: UIButton = {
-        let button = UIButton ()
-        button.setTitle("REGISTRAR", for: .normal)
-        button.layer.backgroundColor = UIColor(red: 0.369, green: 0.639, blue: 0.639, alpha: 1).cgColor
-        button.layer.cornerRadius = 6
-        
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
+    var buttonRegistrar: UIButton = ButtomDefault(text: "REGISTRAR")
     
     func setupVisualElements() {
         self.addSubview(imageLogin)
