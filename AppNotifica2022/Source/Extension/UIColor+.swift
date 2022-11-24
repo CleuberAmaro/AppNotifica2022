@@ -22,8 +22,8 @@ extension UIColor {
         UIColor(named: "buttonBackgroundColor") ?? .black
     }
     
-    static var textFieldBackgroundColor: UIColor {
-        UIColor(named: "textFieldBackgroundColor") ?? .purple
+    static var textFieldBackGroundColor: UIColor {
+        UIColor(named: "textFieldBackGroundColor") ?? .white
     }
     
     static var placeHolderColor: UIColor {

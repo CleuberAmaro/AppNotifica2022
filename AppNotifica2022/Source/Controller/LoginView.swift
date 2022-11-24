@@ -23,10 +23,10 @@ class LoginView: UIView {
     var imageLabel = LabelDefault (text: "Registre e gerencie as ocorrências do seu IF")
         
     //cria a função com as propriedades da campo de texto para o e-mail
-    var emailTextField = TextFieldDefault (text: "E-mail")
+    var emailTextField = TextFieldDefault (text: "  E-mail")
     
     //cria a função com as propriedades da campo de texto para a senha
-    var passwordTextField = TextFieldDefault (text: "Password")
+    var passwordTextField = TextFieldDefault (text: "  Password")
        
     //cria a função com as propriedades do botão para logar
     var buttonLogar: UIButton = ButtomDefault(text: "LOGAR")

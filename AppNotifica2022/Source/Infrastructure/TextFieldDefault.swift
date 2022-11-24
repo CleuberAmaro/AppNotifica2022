@@ -20,7 +20,7 @@ class TextFieldDefault: UITextField {
     }
     
     private func initDefault (text: String){
-        self.backgroundColor = .textFieldBackgroundColor
+        self.backgroundColor = .textFieldBackGroundColor
         self.placeholder = text
         self.translatesAutoresizingMaskIntoConstraints = false
     }
