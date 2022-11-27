@@ -11,7 +11,7 @@ import UIKit
 extension UIColor {
     
     static var viewBackgroundColor: UIColor {
-        UIColor(named: "viewBackGroundColor") ?? .white
+        UIColor(named: "viewBackgroundColor") ?? .white
     }
     
     static var textLabelColor: UIColor {
@@ -23,7 +23,7 @@ extension UIColor {
     }
     
     static var textFieldBackgroundColor: UIColor {
-        UIColor(named: "textFieldBackgroundColor") ?? .purple
+        UIColor(named: "textFieldBackgroundColor") ?? .gray
     }
     
     static var placeHolderColor: UIColor {
