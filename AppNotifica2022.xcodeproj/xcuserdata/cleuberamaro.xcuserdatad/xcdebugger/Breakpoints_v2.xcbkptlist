@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2CB5CA09-6E34-4C52-ADB2-6EDC2217416B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBEA2D6C-B36E-4BB0-9632-0CA96BAC8874"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppNotifica2022/Resource/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "SceneDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "EBEA2D6C-B36E-4BB0-9632-0CA96BAC8874 - fee5a9807992e3ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppNotifica2022.SceneDelegate.__allocating_init() -&gt; AppNotifica2022.SceneDelegate"
+                  moduleName = "AppNotifica2022"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cleuberamaro/Documents/GitHub/AppNotifica2022/AppNotifica2022/Resource/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "EBEA2D6C-B36E-4BB0-9632-0CA96BAC8874 - e3b0c3b6484a16a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppNotifica2022.SceneDelegate.init() -&gt; AppNotifica2022.SceneDelegate"
+                  moduleName = "AppNotifica2022"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cleuberamaro/Documents/GitHub/AppNotifica2022/AppNotifica2022/Resource/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "EBEA2D6C-B36E-4BB0-9632-0CA96BAC8874 - 3dfc0a13691e6ac2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppNotifica2022.SceneDelegate.__deallocating_deinit"
+                  moduleName = "AppNotifica2022"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cleuberamaro/Documents/GitHub/AppNotifica2022/AppNotifica2022/Resource/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
