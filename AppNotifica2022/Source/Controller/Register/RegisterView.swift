@@ -8,13 +8,7 @@
 import Foundation
 import UIKit
 
-class RegisterView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .viewBackgroundColor
-        setupVisualElements()
-    }
+class RegisterView: ViewDefault {
     
     //MARK: Initialize
     var onLoginTap: (() -> Void)?
@@ -28,13 +22,26 @@ class RegisterView: UIView {
                                    //(name: "SF Pro Text", size: 20)!)
         
     //cria a função com as propriedades da campo de texto para o e-mail
-    var emailTextField = TextFieldDefault (text: "  E-mail")
+    var emailTextField = TextFieldDefault (placeholder: "  E-mail", keyBoardType: .emailAddress, returnKeyType: .next)
     
     //cria a função com as propriedades da campo de texto para a senha
-    var passwordTextField = TextFieldDefault (text: "  Password")
+    var passwordTextField: TextFieldDefault = {
+        let text = TextFieldDefault (placeholder: "  Password", keyBoardType: .emailAddress, returnKeyType: .next)
+        
+        text.isSecureTextEntry = true
+        
+        return text
+    }()
+
     
     //cria a função com as propriedades da campo de texto para confirmar a senha
-    var confirmPasswordTextField = TextFieldDefault (text: "  Confirm Password")
+    var confirmPasswordTextField : TextFieldDefault = {
+        let text = TextFieldDefault (placeholder: "  Confirm Password", keyBoardType: .emailAddress, returnKeyType: .done)
+        
+        text.isSecureTextEntry = true
+        
+        return text
+    }()
        
     //cria a função com as propriedades do botão para logar
     var buttonLogar: UIButton = ButtomDefault(text: "LOGAR")
@@ -42,7 +49,11 @@ class RegisterView: UIView {
     //cria a função com as propriedades do botão para registrar
     var buttonRegistrar: UIButton = ButtomDefault(text: "REGISTRAR")
     
-    func setupVisualElements() {
+    override func setupVisualElements() {
+        super.setupVisualElements()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
         self.addSubview(imageLabel)
         self.addSubview(emailTextField)
         self.addSubview(passwordTextField)
@@ -92,14 +103,26 @@ class RegisterView: UIView {
         ])
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
     //MARK: - Actions
     @objc
     private func loginTap(){
         onLoginTap?()
+    }
+}
+//configura o botão seguinte do teclado
+extension RegisterView: UITextFieldDelegate{
+    
+    func textFieldShouldReturn (_ textField: UITextField) -> Bool {
+        
+        if textField == emailTextField {
+            self.passwordTextField.becomeFirstResponder()
+            
+        } else if textField == passwordTextField {
+            self.confirmPasswordTextField.becomeFirstResponder()
+            
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }
