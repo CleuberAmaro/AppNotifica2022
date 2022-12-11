@@ -18,6 +18,8 @@ class HomeCoordinator: Coordinator {
         viewController.tabBarItem.image = UIImage(systemName: "homekit")
         return viewController
     }()
+    
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
