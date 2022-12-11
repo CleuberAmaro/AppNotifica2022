@@ -34,10 +34,10 @@ class LoginView: ViewDefault {
     }()
     
     //cria a função com as propriedades do botão para logar
-    var buttonLogar: UIButton = ButtomDefault(text: "LOGAR")
+    var buttonLogar: UIButton = ButtomDefault(botao: "LOGAR")
     
     //cria a função com as propriedades do botão para registrar
-    var buttonRegistrar: UIButton = ButtomDefault(text: "REGISTRAR")
+    var buttonRegistrar: UIButton = ButtomDefault(botao: "REGISTRAR")
     
         override func setupVisualElements() {
         super.setupVisualElements()
@@ -56,40 +56,41 @@ class LoginView: ViewDefault {
         
         NSLayoutConstraint.activate([
             
-            imageLogin.widthAnchor.constraint(equalToConstant: 274.99),
-            imageLogin.heightAnchor.constraint(equalToConstant: 82.64),
-            imageLogin.topAnchor.constraint(equalTo: self.topAnchor, constant: 228),
-            imageLogin.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 57),
-            imageLogin.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -58.1),
-            
-            imageLabel.widthAnchor.constraint(equalToConstant: 100),
-            imageLabel.topAnchor.constraint(equalTo: imageLogin.bottomAnchor, constant: 10),
-            imageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 22),
-            imageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -23),
-            
-            emailTextField.widthAnchor.constraint(equalToConstant: 70),
-            emailTextField.heightAnchor.constraint(equalToConstant: 60),
-            emailTextField.topAnchor.constraint(equalTo: imageLabel.bottomAnchor, constant: 50),
-            emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            
-            passwordTextField.widthAnchor.constraint(equalToConstant: 70),
+        imageLogin.widthAnchor.constraint(equalToConstant: 274.99),
+        
+        imageLogin.heightAnchor.constraint(equalToConstant: 82.64),
+        imageLogin.topAnchor.constraint(equalTo: self.topAnchor, constant: 228),
+        imageLogin.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 57),
+        imageLogin.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -57),
+                        
+       imageLabel.widthAnchor.constraint(equalToConstant: 100),
+       imageLabel.topAnchor.constraint(equalTo: imageLogin.bottomAnchor, constant: 5),
+       imageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+       imageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+                        
+       emailTextField.widthAnchor.constraint(equalToConstant: 374),
+       emailTextField.heightAnchor.constraint(equalToConstant: 60),
+       emailTextField.topAnchor.constraint(equalTo: imageLabel.bottomAnchor, constant: 70),
+       emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+       emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+                        
+        passwordTextField.widthAnchor.constraint(equalToConstant: 374),
             passwordTextField.heightAnchor.constraint(equalToConstant: 60),
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 30),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 23),
             passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            
-            buttonLogar.widthAnchor.constraint(equalToConstant: 358),
-            buttonLogar.heightAnchor.constraint(equalToConstant: 50),
-            buttonLogar.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 25),
-            buttonLogar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            buttonLogar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            
-            buttonRegistrar.widthAnchor.constraint(equalToConstant: 358),
-            buttonRegistrar.heightAnchor.constraint(equalToConstant: 50),
-            buttonRegistrar.topAnchor.constraint(equalTo: buttonLogar.bottomAnchor, constant: 25),
-            buttonRegistrar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            buttonRegistrar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+                        
+                        buttonLogar.widthAnchor.constraint(equalToConstant: 374),
+                        buttonLogar.heightAnchor.constraint(equalToConstant: 60),
+                        buttonLogar.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 25),
+                        buttonLogar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+                        buttonLogar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+                        
+                        buttonRegistrar.widthAnchor.constraint(equalToConstant: 374),
+                        buttonRegistrar.heightAnchor.constraint(equalToConstant: 60),
+                        buttonRegistrar.topAnchor.constraint(equalTo: buttonLogar.bottomAnchor, constant: 25),
+                        buttonRegistrar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+                        buttonRegistrar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
             
             

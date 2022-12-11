@@ -16,9 +16,10 @@ class ViewControllerDefault: ViewController {
         
         //aumenta o título superior da tela
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.setHidesBackButton(true, animated: false)
         
         //oculta o botão superior do navigationcontroller
-        self.navigationItem.setHidesBackButton(true, animated: false)
+       // self.navigationItem.setHidesBackButton(true, animated: false)
         
         //oculta o teclado ao clicar fora do textfield
         let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(self.hideKeyBoardByTappingoutSide))

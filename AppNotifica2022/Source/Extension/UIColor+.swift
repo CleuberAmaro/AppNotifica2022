@@ -18,12 +18,12 @@ extension UIColor {
         UIColor(named: "textLabelColor") ?? .lightGray
     }
     
-    static var buttonBackgroundColor: UIColor {
-        UIColor(named: "buttonBackgroundColor") ?? .black
+    static var buttonBackGroundColor: UIColor {
+        UIColor(named: "buttonBackGroundColor") ?? .black
     }
     
-    static var textFieldBackgroundColor: UIColor {
-        UIColor(named: "textFieldBackgroundColor") ?? .gray
+    static var textFieldBackGroundColor: UIColor {
+        UIColor(named: "textFieldBackGroundColor") ?? .gray
     }
     
     static var placeHolderColor: UIColor {

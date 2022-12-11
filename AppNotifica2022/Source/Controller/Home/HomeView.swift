@@ -11,7 +11,6 @@ import UIKit
 class HomeView: ViewDefault {
 
     
-     override func setupVisualElements() {
-         super.setupVisualElements()
-    }
+    override func setupVisualElements() {
+   }
 }
