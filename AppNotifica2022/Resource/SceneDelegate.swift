@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 self.window?.rootViewController = navigationController
                 
                 //passo o navigationController daqui para o coordinator LoginCoordinatior
-                let coordinator = RegisterCoordinator(navigationController: navigationController)
+                let coordinator = LoginCoordinator(navigationController: navigationController)
         
                 coordinator.start()
             }
@@ -57,6 +57,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        
+        // Save changes in the application's managed object context when the application transitions to the background.
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 

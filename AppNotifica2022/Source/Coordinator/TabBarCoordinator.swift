@@ -19,10 +19,10 @@ class TabBarCoordinator: Coordinator {
         let tabBarController = TabBarController()
         
         let homeViewCoordinator = HomeCoordinator(navigationController: self.navigationController)
-        let novaOcorrenciaCoordinator = NovaOcorrenciaCoordinator(navigationController: self.navigationController)
+        let novaOcorrenciaViewCoordinator = NovaOcorrenciaCoordinator(navigationController: self.navigationController)
         let sobreViewCoordinator = SobreCoordinator(navigationController: self.navigationController)
         
-        tabBarController.setViewControllers([homeViewCoordinator.homeViewController, novaOcorrenciaCoordinator.novaOcorrenciaViewController, sobreViewCoordinator.sobreViewController], animated: true)
+        tabBarController.setViewControllers([homeViewCoordinator.homeViewController, novaOcorrenciaViewCoordinator.novaOcorrenciaViewController, sobreViewCoordinator.sobreViewController], animated: true)
         
         self.navigationController.pushViewController(tabBarController, animated: true)
     }
