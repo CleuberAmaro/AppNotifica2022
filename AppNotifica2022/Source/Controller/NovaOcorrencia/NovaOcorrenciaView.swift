@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 class NovaOcorrenciaView: ViewDefault {
     //MARK: - Closures
+    var onCameraTap: (()->Void)?
     
     //MARK: - Properties
     
@@ -18,7 +19,7 @@ class NovaOcorrenciaView: ViewDefault {
         
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(cameraTap))
         view.addGestureRecognizer(tapGR)
-        view
+        view.isUserInteractionEnabled = true
         
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -82,5 +83,15 @@ class NovaOcorrenciaView: ViewDefault {
             saveButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
             saveButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
         ])
+    }
+    
+    @objc
+    
+    private func cameraTap () {
+        self.onCameraTap?()
+    }
+    
+    func setImage (image: UIImage){
+        imagem.image = image
     }
 }
